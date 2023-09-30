@@ -43,12 +43,12 @@
             function updateCountdown() {
                 var now = new Date().getTime();
                 var currentYear = new Date().getFullYear();
-                var birthdayDate = new Date(currentYear, 8, 25).getTime(); // Birthday is on September 25th
+                var birthdayDate = new Date(currentYear, 8, 25).getTime(); // Birthday is on September 30th
 
                 // If birthday has already passed this year, update to next year
                 if (now > birthdayDate) {
                     currentYear++;
-                    birthdayDate = new Date(currentYear, 11, 25).getTime();
+                    birthdayDate = new Date(currentYear, 8, 25).getTime();
                 }
 
                 var timeLeft = birthdayDate - now;
