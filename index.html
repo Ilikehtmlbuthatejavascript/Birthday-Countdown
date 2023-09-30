@@ -1,80 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Countdown</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d4b4c55d37.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Add this CSS to initially hide the countdown elements */
-        .data {
-            display: none;
-        }
-    </style>
+	<title>My Portfolio</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com"> 
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
 </head>
 <body>
-    <header>
-        <h2><i class="fa-solid fa-gifts"></i>    Birthday Countdown    <i class="fa-solid fa-gifts"></i></h2>
-    </header>
 
-    <div class="container">
-        <div class="column">
-            <h3 class="heading">Days</h3>
-            <p id="days" class="data"></p>
-        </div>
-        <div class="column">
-            <h3 class="heading">Hours</h3>
-            <p id="hours" class="data"></p>
-        </div>
-        <div class="column">
-            <h3 class="heading">Minutes</h3>
-            <p id="minutes" class="data"></p>
-        </div>
-        <div class="column">
-            <h3 class="heading">Seconds</h3>
-            <p id="seconds" class="data"></p>
-        </div>
-    </div>
+<nav>
+	<a id="logo">WILLIAM MACFARLANE</a>
+	<div id="navtags">
+	<a href="#contact">Contact</a>
+	<a href="#projects">Projects</a>
+	<a href="#home">Home</a>
+	</div>
+</nav>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            function updateCountdown() {
-                var now = new Date().getTime();
-                var currentYear = new Date().getFullYear();
-                var birthdayDate = new Date(currentYear, 8, 25).getTime(); // Birthday is on September 25th
+<section id="home">
+	<div>
+		<h1>Hey, I'm William</h1>
+		<h1>
+            <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im William.", "Thanks for viewing my site", "I Love Web Design.", "I Love to Develop." ]'>
+              <span class="wrap"></span>
+            </a>
+          </h1>
+	</div>
+</section>
 
-                // If birthday has already passed this year, update to next year
-                if (now > birthdayDate) {
-                    currentYear++;
-                    birthdayDate = new Date(currentYear, 11, 25).getTime();
-                }
+<section id="projects">
+	<h2 id="projectstitle">Here are some things I've been working on</h2>
 
-                var timeLeft = birthdayDate - now;
+	<div id="projectsquares">
 
-                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+		<div class="projectdiv">
+			<a href="https://replit.com/@ASHGaming1122/Hangman">
+				<img src="images/Capture.PNG" alt="command line hangman" title="Hangman">
+				<p>Hangman</p>
+			</a>
+		</div>
 
-                // Show the countdown elements once the timer starts
-                document.querySelectorAll(".data").forEach(function (element) {
-                    element.style.display = "block";
-                });
+		<div class="projectdiv">
+			<a href="https://sttteephen.github.io/To-Do-List/">
+				<img src="images/todo_screenshot.png" alt="to do list website" title="To Do List">
+				<p>To Do List</p>
+			</a>
+		</div>
 
-                document.querySelector("#days").innerHTML = days + "d";
-                document.querySelector("#hours").innerHTML = hours + "h";
-                document.querySelector("#minutes").innerHTML = minutes + "m";
-                document.querySelector("#seconds").innerHTML = seconds + "s";
-            }
+		<div class="projectdiv">
+			<a href="https://sttteephen.github.io/ChristmasCountdown/">
+				<img src="images/otherCapture.PNG" alt="christmas countdown website" title="Christmas Countdown">
+				<p>Christmas Countdown</p>
+			</a>
+		</div>
 
-            // Initial call to update the countdown
-            updateCountdown();
+		<div class="projectdiv">
+			<a href="https://codepen.io/sttteephen/pen/gOwJxdg">
+				<img src="images/product_landing_page.png" alt="chocolate product landing page" title="Product Landing Page">
+				<p>Product Landing Page</p>
+			</a>
+		</div>
 
-            // Update the countdown every second
-            var getBirthdayCountdownTime = setInterval(updateCountdown, 1000);
-        });
-    </script>
+		<div class="projectdiv">
+			<a href="https://codepen.io/sttteephen/pen/YzpdjMj?editors=1100">
+				<img src="images/tech_doc.png" alt="technical documentation" title="Technical Documentation">
+				<p>Technical Documentation</p>
+			</a>
+		</div>
+
+		<div class="projectdiv">
+			<a href="https://codepen.io/sttteephen/pen/GRqdWra">
+				<img src="images/surveyform.png" alt="survey form " title="Survey Form">
+				<p>Survey Form</p>
+			</a>
+		</div>
+
+	</div>
+</section>
+
+<section id="contact">
+	<h2>Get In Touch...</h2>
+	<div id="links">
+		<a class="icons" href="https://github.com/Ilikehtmlbuthatejavascript">Github <i class="fa fa-github"></i></a>
+		<a class="icons" href="mailto:Wilam13@outlook.com">Email <i class="fa fa-at"></i> </a>
+	</div>
+</section>
+
+<script type="text/javascript" src="script.js"></script>
+
 </body>
 </html>
