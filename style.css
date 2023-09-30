@@ -1,43 +1,215 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-
-body {
-    font-family: "Quicksand", sans-serif;
-    background: #56ab2f;
-    background: -webkit-linear-gradient(
-        to right
-        #a8e063,
-        #56ab2f
-    );
-    background: linear-gradient(
-        to right,
-        #a8e063,
-        #56ab2f
-    );
-    font-size: 35px;
-    text-align: center;
+:root {
+	--navcolor: #30475e;
 }
 
-h2{
-    color: white; 
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
 }
 
-.container {
-    font-family: 'Lobster', cursive;
-    color: red;
-    margin: 0;
+.typewrite {
+    color: white;
+    font-size: 30px;
+    transform: translate(-50%, 120%);
     position: absolute;
+    margin: 0;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: row;
-    border: 3px solid #fff;
-    padding: 5px 10px;
-    background: black;
+}
+.typewrite:hover {
+	cursor: text;
 }
 
-.column {
-    flex-direction: column;
-    text-align: center;
-    margin-right: 19px;
+
+body {
+	background-color: #222222;
+	color: black;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+}
+
+nav {
+	width: 100%;
+	height: 80px;
+	background-color: #ffffff;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+}
+
+nav a {
+	text-decoration: none;
+	display: block;
+	float: right;
+	color: black;
+	font-size: 1.75em;  
+	padding: 10px 10px 10px 10px;
+	line-height: 60px;
+	margin-right: 10px;
+}
+
+nav a:hover {
+	background-color: var(--navcolor);
+	color: white;
+}
+
+.bluenav {
+	background-color: #30475e;
+}
+
+.orangenav {
+	background-color: #f1935c;
+}
+
+.greennav {
+	background-color: #85a392;
+}
+
+#logo {
+	background-color: var(--navcolor);
+	color: white;
+	float: left;
+	font-size: 2em;
+	letter-spacing: -3px;
+	font-weight: bolder;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 30px;
+}
+
+#home {
+	width: 100%;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+	height: 100vh;
+	background-color: #30475e;
+}
+
+h1 {
+	font-size: 5em;
+}
+
+#home p {
+	font-size: 2em;
+}
+
+@media screen and (max-width: 700px) {
+	#home div {
+		width: 80%;
+	}
+
+	h1 {
+		font-size: 4em;
+	}
+
+	#home p {
+		font-size: 1.75em;
+	}
+
+	#logo {
+		margin-left: 10px;
+	}
+}
+
+#projects {
+	text-align: center;
+	background-color: #f1935c;
+	padding: 20px 20px 80px 20px;
+}
+
+#projectstitle {
+	padding-top: 100px;
+}
+
+h2 {
+	font-size: 3em;
+	margin-bottom: 50px;
+}
+
+#projectsquares {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.projectdiv {
+	background-color: #35475C;
+	margin: 20px;
+	width: 425px;
+	border-radius: 20px;;
+}
+
+.projectdiv p {
+	font-size: 1.75em;
+	padding: 10px 10px 20px 10px;
+}
+
+img {
+	width: 100%;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+a {
+	color: white;
+}
+
+.projectdiv a:hover {
+	text-decoration: underline;
+}
+
+figcaption {
+	padding-top: 10px;
+}
+
+#contact {
+	color: white;
+	width: 100%;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+	height: 100vh;
+	background-color: #85a392;
+}
+
+#contact h2 {
+	font-size: 4em;
+}
+
+#links a {
+	font-size: 2.5em;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+@media screen and (max-width: 600px) {
+	#contact {
+		text-align: center;
+	}
+
+	#links {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	#links a {
+		padding-top: 20px;
+	}
+}
+
+.icons {
+	position: relative;
+	top: 0;
+	transition: top ease 0.5s;
+}
+
+.icons:hover {
+	top: -10px;
 }
