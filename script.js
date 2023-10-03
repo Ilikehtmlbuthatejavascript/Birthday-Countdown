@@ -65,14 +65,14 @@ window.addEventListener('scroll', function(){
     var bottom = document.body.offsetHeight;
 
     if (yOffset < (windowHeight-80)) {
-        root.style.setProperty('--navcolor', '#30475e');
+        root.style.setProperty('--navcolor', '#F6958E');
     }
 
     if (yOffset > (windowHeight-80)) {
-        root.style.setProperty('--navcolor', '#f1935c');
+        root.style.setProperty('--navcolor', '#F6B48E');
     }
 
     if (yOffset > (borrom - windowHeight - 80)) {
-        root.style.setProperty('--navcolor', '#85a392');
+        root.style.setProperty('--navcolor', '#25a36f');
     }
 });
