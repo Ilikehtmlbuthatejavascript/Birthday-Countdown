@@ -72,7 +72,7 @@ window.addEventListener('scroll', function(){
         root.style.setProperty('--navcolor', '#F6B48E');
     }
 
-    if (yOffset > (borrom - windowHeight - 80)) {
+    if (yOffset > (bottom - windowHeight - 80)) {
         root.style.setProperty('--navcolor', '#25a36f');
     }
 });
