@@ -86,7 +86,7 @@ nav a:hover {
   	justify-content: center;
   	align-items: center;
 	height: 100vh;
-	background-color: #30475e;
+	background-color: #f6958e;
 }
 
 h1 {
@@ -138,7 +138,7 @@ h2 {
 }
 
 .projectdiv {
-	background-color: #35475C;
+	background-color: #f6b48e;
 	margin: 20px;
 	width: 425px;
 	border-radius: 20px;;
@@ -175,7 +175,7 @@ figcaption {
   	justify-content: center;
   	align-items: center;
 	height: 100vh;
-	background-color: #85a392;
+	background-color: #25a36f;
 }
 
 #contact h2 {
