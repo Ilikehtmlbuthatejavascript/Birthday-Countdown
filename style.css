@@ -19,7 +19,7 @@
     left: 50%;
     transition: top ease  0.5s;
 }
-.typewrite:hover {
+h1:hover {
 	cursor: text;
 	top: -10;
 }
