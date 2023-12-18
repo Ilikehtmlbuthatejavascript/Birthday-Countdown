@@ -8,6 +8,9 @@
 	text-decoration: none;
 	list-style: none;
 }
+.typewrite:hover {
+	cursor: pointer;
+}
 
 .typewrite {
     color: white;
